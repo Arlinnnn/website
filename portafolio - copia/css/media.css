@@ -1,0 +1,185 @@
+
+/* Estilos para pantallas pequeñas  */
+@media (max-width: 768px) {
+.carrousel {
+    height: 200px;
+} 
+    .hero-text h1{
+        font-size: 3em;
+    }
+    footer nav ul li {
+  display:flex;
+  margin: 5px 30px;
+  text-decoration: underline;
+  justify-content:start ;
+}
+footer .social-icons {
+    display: flex;
+    justify-content:end ;
+}
+footer p {
+    display: flex;
+    justify-content:end ;
+}
+.bann3 h2{
+    font-size: 1em;
+    padding-left: 10px;
+}
+}
+@media (max-width:900px){
+    .hero p{
+        font-size: 1.1rem;
+    }
+    .project-grid{
+ grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
+    .project h3 {
+        font-size: 1.2rem;
+    }
+    .project p {
+        font-size: 0.9rem;
+    }
+    .hover-box{
+      
+        height: 300px;
+    }
+    .galeria{
+        margin-top: 5px;
+    }
+    footer li, p{
+        font-size: 1em;
+    }
+}
+@media (max-width:420px) {
+   /* .nav nav {
+        display:none;
+    } */
+    figure{
+        width: 400px;
+    }
+    .pfdiv p{
+        font-size: 0.6rem;
+        text-align: end;
+        margin-right: 30px;
+    }
+    h1{
+        font-size: 1.6em;
+    }
+    .first{
+        font-size:1rem;
+    }
+    .second{
+        font-size: 0.8rem;
+        width: 60%;
+    }
+
+  model-viewer {
+    width: 300px;
+    height: 200px; 
+    margin: 0 ; 
+    
+  }
+  .bann h1{
+    font-size: 2.5rem;
+  }
+  #up{
+    font-size:1.3rem;
+  }
+  .bann3 h2{
+    font-size: 1.7rem;
+  }
+.viewer-container{
+    display: flex;
+    flex-direction: column;
+}
+  #description {
+    margin-bottom: 50px;
+    max-width: 100%; 
+  
+  }
+
+
+    /* nav ul li {
+display: none;
+    } */
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+.hero{
+    height: 500px;
+}
+.hero-text p{
+    font-size: 0.9rem;
+}
+.project-grid{
+ grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+    }
+    .bann h2{
+        font-size: 1.1rem;
+    }
+    .cta h2{
+        font-size: 1.4rem;
+    }
+     .img-item{
+      
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .carrousel  {
+    height: 100px;
+} 
+  .hover-box {
+    width: calc(50% - 10px); /* Calcula el ancho para dividir en dos columnas con un pequeño margen */
+    height: auto; /* Para que la altura se ajuste proporcionalmente */
+ 
+
+        height: 200px;
+        width: 640px;}
+ 
+    .galeria{
+        margin-top: 5px;
+    }
+}
+@media (max-width: 768px) {
+  /* Mostrar el botón de hamburguesa en pantallas pequeñas */
+  #hamburger {
+    display: block;
+  }
+
+  /* Esconder el menú inicialmente en pantallas pequeñas */
+  #navbar {
+    display: none;
+    width: 100%; /* Asegura que el menú ocupe toda la fila */
+  }
+
+  /* Cambiar el estilo del menú cuando se despliega */
+  #navbar.open {
+    display: block;
+    background-color: #8d8eae;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar ul li {
+    margin: 5px 0;
+  }
+
+  /* Hacer que el menú se coloque debajo del logo */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar {
+    margin-top: 10px; /* Asegura que haya espacio entre el logo y el menú */
+  }
+}

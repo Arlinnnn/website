@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Portafolio profesional de diseño UX/UI, prototipado y diseño gráfico">
+  <title>Contacto - Mi Portafolio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/contacto.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/css/media.css">
+</head>
+<body>
+<header>
+  <a href="/index.html" id="log">LinEspinal</a> 
+
+  <button id="hamburger" aria-label="Toggle navigation">
+    &#9776; <!-- símbolo de "hamburguesa" -->
+  </button>
+
+  <nav id="navbar" class="nav">
+    <ul>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="acerca.html">Acerca de mí</a></li>
+      <li><a href="https://arlinnespinal1.wixsite.com/s-blog" target="_blank">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+       <div class="bann">
+    <h1 id="head">Pongamósnos en Contacto</h1>
+    
+  </div>
+  <h2 id="up">Rellena con tus datos y trataremos de responder lo más pronto posible</h2>
+<form id="contact-form" class="contact-form"
+  action="https://formspree.io/f/myzgqnov"
+  method="POST"
+>
+ <div class="form-field">
+
+    <label for="name">Nombre y Apellido</label>
+    <input type="text" id="name" name="name" placeholder="Ej: Anabel Matos" required>
+  </div>
+  
+  <div class="form-field">
+    <label for="email">Correo Electronico</label>
+    <input type="email" id="email" name="email" placeholder="ejemplo@mail.com" required>
+  </div>
+  
+  <div class="form-field">
+    <label for="services">Selecciona un servicio</label>
+    <select id="services" name="services" required>
+      <option value="" disabled selected>Elige un servicio</option>
+      <option value="web-design">Diseño Web</option>
+      <option value="branding">Branding</option>
+      <option value="editorial-design">Diseño Editorial</option>
+      <option value="ecommerce">E-commerce</option>
+      <option value="ui-ux-design">Diseño UI/UX</option>
+    </select>
+  </div>
+  
+  <div class="form-field">
+    <label for="message">Mensaje</label>
+    <textarea id="message" name="message" placeholder="Tu mensaje ... " required></textarea>
+  </div>
+
+  <!-- Checkbox para aceptar las políticas de privacidad -->
+  <div >
+    <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+    <label for="privacy-policy">Acepto las <a class="acheck"href="link-a-politica-de-privacidad.html" target="_blank">políticas de privacidad</a></label>
+  </div>
+  
+  <button type="submit" class="btn-submit">Enviar</button>
+</form>
+
+<!-- Overlay y animación de éxito -->
+<div id="success-overlay" class="overlay-success">
+  <div class="success-message">
+    <h2>¡Mensaje Enviado!</h2>
+    <p>Gracias por contactarnos. Te redirigiremos al inicio en unos momentos.</p>
+  </div>
+  <br>
+</div>
+   <div class="bann3">
+    <h2>Impulsa tu negocio con un diseño que destaca</h2>
+    
+  </div>
+
+<footer>
+   <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.behance.net" target="_blank"><i class="fab fa-behance"></i></a>
+    <a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    
+  </div>
+    <nav>
+    <ul>
+      <li><a href="/htmls/galeria.html">Galería</a></li>
+      <li><a href="/htmls/acerca.html">Acerca de mí</a></li>
+      <li><a href="https://arlinnespinal1.wixsite.com/s-blog" target="_blank">Blog</a></li>
+      <li><a href="/htmls/contacto.html">Contacto</a></li>
+      <li><a href="politicypriv.html" >Politica de privacidad</a></li>
+      <li><a href="politicycookies.html" >Politica de cookies</a></li>
+      <li><a href="avisolegl.html" >Aviso legal</a></li>
+    </ul>
+  </nav>
+  
+ 
+ <p>&copy; 2024 LinEspinal. Todos los derechos reservados.</p>
+
+</footer>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

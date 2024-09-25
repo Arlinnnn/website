@@ -1,0 +1,208 @@
+
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+ color: #fff;
+  background-color: #090A2F;
+  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}/* Estilos generales del formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1c51;
+  border-radius: 8px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.form-field input, .form-field textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-field input:focus, .form-field textarea:focus {
+  border-color: #2b2e80;
+  box-shadow: 0 0 8px rgba(43, 46, 128, 0.5);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.btn-submit {
+  background-color: #090A2F;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #2b2e80;
+}
+#up{
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: wavy;
+
+  
+}
+.d-cta{
+background-color: #26298d;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  height: 150px;
+  line-height: 20px;
+}
+.d-btn {
+  background-color: #1a1c51;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.d-cta h3{
+  margin-top:40px;
+}
+.d-cta .d-btn:hover {
+  background-color: #30315f;
+}
+.bann3{
+  width: 100%;
+  height: 380px;
+  margin: 10px;
+  margin-top: 60px;
+  display: flex;
+ justify-content: left;
+font-size:1.8rem;
+line-height: 90px;
+ font-weight: bold;
+    margin-bottom: 0;
+    padding:0;
+}
+#head{
+  padding-right: 35px;
+}
+.bann3 h2 {
+    padding-left: 25px;
+}
+.bann  h3{
+  padding: 20px;
+
+}
+.bann{
+  height: 220px;
+}
+/* Overlay de éxito */
+.overlay-success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 1000;
+}
+
+.success-message {
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+/* Estilos para el campo select */
+.form-field select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #090A2F;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-field select:focus {
+  border-color: #2b2e80;
+  box-shadow: 0 0 8px rgba(43, 46, 128, 0.5);
+  outline: none;
+}
+
+/* Checkbox */
+ input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.acheck  {
+  color: #c5c6f2;
+  text-decoration: underline;
+}
+
+.acheck:hover  {
+  color: #fff;
+}
+/* Estilo para el botón de menú de hamburguesa */
+#hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* Cambia el color del ícono de hamburguesa a blanco */
+  display: none; /* Oculto por defecto */
+  margin-left: auto; /* Mantiene el botón a la derecha en pantallas pequeñas */
+}
+
+/* Estilos generales para la barra de navegación */
+#navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Espaciado entre los elementos del menú */
+#navbar ul li {
+  margin-left: 20px;
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
