@@ -4,7 +4,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #090A2F;
-  color: #333;
+  color: #fff;
+  
 }
  #log{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

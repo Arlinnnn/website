@@ -5,6 +5,7 @@ body, html {
   font-family: Helvetica, sans-serif;
   color: #fff;
   background-color: #090A2F;
+
   scroll-behavior: smooth;
 }
 
@@ -233,6 +234,7 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
+  font-size: 0.9rem;
 }
 
 footer nav ul {
@@ -243,6 +245,7 @@ footer nav ul {
 footer nav ul li {
   display: inline-block;
   margin: 0 10px;
+  margin-top: 10px;
 }
 
 footer nav ul li a {
