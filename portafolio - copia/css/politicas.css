@@ -1,0 +1,15 @@
+body{
+    padding:25px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+a{
+   text-decoration: underline;
+    color: #fff;
+}
+a:hover{
+    color: #c1c2c1;
+    text-decoration: underline;
+}
