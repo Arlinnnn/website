@@ -1,121 +1,107 @@
-//cookies
+document.addEventListener('DOMContentLoaded', function () {
+    const banner = document.getElementById('cookie-banner');
+    const essentialCookie = document.getElementById('essential');
+    const functionalCookie = document.getElementById('functional');
+    const advertisingCookie = document.getElementById('advertising');
+    const thirdPartyCookie = document.getElementById('third-party');
+    const acceptAllButton = document.getElementById('accept-all');
+    const savePreferencesButton = document.getElementById('save-preferences');
 
-// Función para mostrar el popup
-function mostrarPopup() {
-    document.getElementById('cookiePopup').style.display = 'block';
-}
+    // Idioma y Modo del OS
+    const language = navigator.language || 'es'; // Idioma predeterminado del navegador
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const mode = prefersDarkMode ? 'dark' : 'light'; // Detecta si el usuario prefiere modo oscuro/claro
 
-// Función para cerrar el popup
-function cerrarPopup() {
-    document.getElementById('cookiePopup').style.display = 'none';
-}
+    // Mostrar el banner si las cookies no han sido aceptadas
+    if (!getCookie('cookieConsent')) {
+        banner.classList.add('banner-visible');
+    } else {
+        loadGoogleAnalytics();  // Cargar cookies de terceros si ya se han aceptado
+    }
 
-// Función para generar cookies propias
-function generarCookiesPropias() {
-    document.cookie = "cookiePropia=true; path=/";
-    alert('Cookie propia generada');
-}
+    // Aceptar todas las cookies
+    acceptAllButton.addEventListener('click', function () {
+        setCookie('cookieConsent', 'all', 365);
+        setCookie('essentialConsent', 'true', 365); // Acepta las esenciales
+        setCookie('functionalConsent', 'true', 365); // Acepta las funcionales
+        setCookie('language', language, 365); // Se guarda si se aceptan las funcionales
+        setCookie('mode', mode, 365); // Se guarda si se aceptan las funcionales
+        setCookie('lastSession', new Date().toISOString(), 365); // Se guarda si se aceptan las funcionales
+        banner.classList.remove('banner-visible');
+        loadGoogleAnalytics();
+    });
 
-// Función para generar cookies de terceros
-function generarCookiesTerceros() {
-    document.cookie = "cookieTercero=true; path=/";
-    alert('Cookie de terceros generada');
-}
+    // Guardar las preferencias de cookies
+    savePreferencesButton.addEventListener('click', function () {
+        const preferences = {
+            functional: functionalCookie.checked,
+            advertising: advertisingCookie.checked,
+            thirdParty: thirdPartyCookie.checked
+        };
+        setCookie('cookieConsent', JSON.stringify(preferences), 365);
 
-// Función para leer y mostrar las cookies almacenadas
-function leerCookies() {
-    const cookies = document.cookie.split('; ').map(cookie => cookie.split('='));
-    const cookiesAlmacenadas = cookies.map(([name, value]) => `${name}: ${value}`).join('<br>');
-    document.getElementById('cookiesAlmacenadas').innerHTML = cookiesAlmacenadas;
-}
+        // Verifica si el usuario ha aceptado las cookies esenciales
+        if (essentialCookie.checked) {
+            setCookie('essentialConsent', 'true', 365); // Acepta las esenciales
+        } else {
+            setCookie('essentialConsent', 'false', 365); // No aceptó las esenciales
+        }
 
-// Mostrar el popup cuando la página carga
-window.onload = function () {
-    mostrarPopup();
-};
-function mostrarPopup() {
-    document.getElementById('cookiePopup').style.display = 'block';
-}
+        // Guardar las cookies de lenguaje, modo y última sesión solo si se aceptan las cookies funcionales
+        if (functionalCookie.checked) {
+            setCookie('functionalConsent', 'true', 365); // Acepta las funcionales
+            setCookie('language', language, 365); // Solo se guarda si se aceptan las funcionales
+            setCookie('mode', mode, 365); // Solo se guarda si se aceptan las funcionales
+            setCookie('lastSession', new Date().toISOString(), 365); // Solo se guarda si se aceptan las funcionales
+        } else {
+            setCookie('functionalConsent', 'false', 365); // No aceptó las funcionales
+        }
 
-// Función para cerrar el popup
-function cerrarPopup() {
-    document.getElementById('cookiePopup').style.display = 'none';
-}
+        banner.classList.remove('banner-visible');
+        if (preferences.thirdParty) {
+            loadGoogleAnalytics();
+        }
+    });
 
-// Función para generar cookies propias
-function generarCookiesPropias() {
-    document.cookie = "cookiePropia=true; path=/";
-    alert('Cookie propia generada');
-}
+    // Función para obtener una cookie
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
 
-// Función para generar cookies de terceros
-function generarCookiesTerceros() {
-    document.cookie = "cookieTercero=true; path=/";
-    alert('Cookie de terceros generada');
-}
+    // Función para establecer una cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = `expires=${date.toUTCString()}`;
+        document.cookie = `${name}=${value}; ${expires}; path=/; Secure; SameSite=Lax`;
+    }
 
-// Función para leer y mostrar las cookies almacenadas
-function leerCookies() {
-    const cookies = document.cookie.split('; ').map(cookie => cookie.split('='));
-    const cookiesAlmacenadas = cookies.map(([name, value]) => `${name}: ${value}`).join('<br>');
-    document.getElementById('cookiesAlmacenadas').innerHTML = cookiesAlmacenadas;
-}
+    // Cargar Google Analytics solo si se aceptan cookies de terceros
+    function loadGoogleAnalytics() {
+        if (getCookieConsent('thirdParty')) {
+            // Código de Google Analytics
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-// Mostrar el popup cuando la página carga
-window.onload = function () {
-    mostrarPopup();
-};
-//html:
-//   <div id="cookiePopup" class="cookie-popup"></div>
-//     <div class="popup-content">
-//         <h2>Uso de Cookies</h2>
-//         <p>Esta página utiliza cookies para mejorar la experiencia del usuario. Puedes gestionar tus preferencias a continuación:</p>
-//         <button class="button-cookie" onclick="generarCookiesPropias()">Cookies Propias</button>
-//         <button class="button-cookie" onclick="generarCookiesTerceros()">Cookies de Terceros</button>
-//         <button class="button-cookie" onclick="leerCookies()">Mostrar las cookies creadas</button>
-//         <div id="cookiesAlmacenadas"></div>
-//         <button class="button-cookie , aceptar" onclick="cerrarPopup()">Aceptar</button>
-//     </div>
-// </div >
-// //css:
-//* Inicialmente oculto *//
-//  .cookie - popup {
-//     display: none;
-//     position: fixed;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background: rgba(0, 0, 0, 0.8);
-//     color: #fff;
-//     padding: 20px;
-//     text - align: center;
-//     z - index: 1000;
-// }
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('send', 'pageview');
+        }
+    }
 
-// .popup - content {
-//     background: #333;
-//     border - radius: 8px;
-//     padding: 20px;
-//     display: inline - block;
-// }
-
-// .button - cookie {
-//     margin: 10px;
-//     padding: 10px 20px;
-//     background - color: #FFD700;
-//     border: none;
-//     color: #000;
-//     cursor: pointer;
-//     border - radius: 5px;
-// }
-// .aceptar{
-//     background - color: #6ed173;
-//     color: #000;
-// }
-
-// .button - cookie:hover {
-//     background - color: #fae051c3;
-// }
-// .aceptar:hover{
-//     background - color: #5cae60;
-// }
+    // Función para obtener preferencias de cookies
+    function getCookieConsent(type) {
+        const consent = getCookie('cookieConsent');
+        if (consent) {
+            const parsedConsent = JSON.parse(consent);
+            return parsedConsent[type];
+        }
+        return false;
+    }
+});

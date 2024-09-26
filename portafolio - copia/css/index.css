@@ -69,6 +69,7 @@ body, html {
   padding: 50px 20px;
   text-align: center;
   margin: 0;
+  margin-bottom: 160px;
   background-color: #090A2F;
 }
 
@@ -228,6 +229,73 @@ line-height: 90px;
 .galeria{
   margin: 0;
 }
+#bann4{
+  margin-top: 60px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+}
+.uno{
+width: 50%;
+margin-right:90px ;
+margin-left:100px ;
+gap:20px;
+}
+.dos{
+width: 50%;
+}
+#icono{
+  width: 65%;
+}
+#skills-tools {
+  text-align: center;
+  background-color: #1a1c5189;
+  padding: 50px 20px;
+  margin-top: 160px;
+   margin-bottom: 160px;
+}
+
+#skills-tools h2 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#skills-tools p {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+h2{
+  font-size: 3em;
+}
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.skill-item p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #fff;
+}
+
 /* Footer */
 footer {
   background-color: #1a1c5189;
