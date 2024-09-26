@@ -1,6 +1,6 @@
 body{
-    padding:25px;
-    
+    padding:0;
+    margin: 0 auto;
 }
 .row{
     display: flex;
@@ -13,4 +13,21 @@ a{
 a:hover{
     color: #c1c2c1;
     text-decoration: underline;
+}
+article{
+     padding:25px;
+     background-color: #1a1c51;}
+
+.mx-auto{
+    max-width: 90%;
+     margin: 30px;}
+
+.text-center{
+    background-color: #2b2e80;
+}
+.ng-binding{
+    text-decoration: underline;
+}
+li{
+    margin-bottom: 20px;
 }
