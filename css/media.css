@@ -30,6 +30,21 @@ footer p {
     .hero p{
         font-size: 1.1rem;
     }
+        .uno h2 {
+font-size: 1.2em;
+    }
+    .uno h3{
+      font-size: 0.7em
+    }
+    .uno {
+      width: 50%;
+      margin:30px;
+    }
+    .dos{
+      width: 50%;
+      padding-top: 80px;
+      margin-left: 20px;
+    }
     .project-grid{
  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     }
@@ -49,11 +64,18 @@ footer p {
     footer li, p{
         font-size: 1em;
     }
+    .d-cta h2{
+    font-size: 1.3em;
+   }
+   .bann h2{
+    font-size: 1.3em;
+   }
 }
+
 @media (max-width:420px) {
-   /* .nav nav {
-        display:none;
-    } */
+   .d-cta h2{
+    font-size: 1em;
+   }
     figure{
         width: 400px;
     }
@@ -72,7 +94,9 @@ footer p {
         font-size: 0.8rem;
         width: 60%;
     }
-
+#cookie-popup h2{
+  font-size: 1em;
+}
   model-viewer {
     width: 300px;
     height: 200px; 
@@ -83,7 +107,7 @@ footer p {
     font-size: 2.5rem;
   }
   #up{
-    font-size:1.3rem;
+    font-size:1rem;
   }
   .bann3 h2{
     font-size: 1.7rem;
@@ -139,13 +163,55 @@ display: none;
     .galeria{
         margin-top: 5px;
     }
+    .uno h2 {
+font-size: 1em;
+    }
+    .uno h3{
+      font-size: 0.5em
+    }
+    .uno {
+      width: 40%;
+      margin:30px;
+    }
+    .dos{
+      width: 40%;
+      padding-top: 50px;
+      margin-left: 20px;
+    }
 }
 @media (max-width: 768px) {
   /* Mostrar el botón de hamburguesa en pantallas pequeñas */
   #hamburger {
     display: block;
   }
-
+  #cookie-popup h2{
+  font-size: 1.2em;
+}
+    .uno h2 {
+font-size: 1.2em;
+    }
+    .uno h3{
+      font-size: 0.7em
+    }
+    .uno {
+      width: 50%;
+      margin:30px;
+    }
+    .dos{
+      width: 50%;
+      padding-top: 80px;
+      margin-left: 20px;
+    }
+.cookie-buttons{
+  font-size: 0.8em;
+  width: 90%;
+}
+.d-cta h2{
+    font-size: 1.2em;
+   }
+   .bann h2{
+    font-size: 1.2em;
+   }
   /* Esconder el menú inicialmente en pantallas pequeñas */
   #navbar {
     display: none;
@@ -171,7 +237,12 @@ display: none;
   #navbar ul li {
     margin: 5px 0;
   }
-
+#up{
+  font-size: 1.2em;
+}
+#head{
+  font-size: 1.5em;
+}
   /* Hacer que el menú se coloque debajo del logo */
   header {
     display: flex;
