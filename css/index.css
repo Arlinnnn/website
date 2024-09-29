@@ -42,7 +42,7 @@ body, html {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   animation: fadeInDown 1s ease;
 }
 
