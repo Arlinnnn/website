@@ -1,5 +1,16 @@
 /* Responsividad */
 /* Media query para pantallas pequeñas (móviles y tabletas) */
+@media (max-width: 667px) {
+header{
+  width: 450px;
+  padding: 0;
+  margin: 0;
+}
+#hamburguer,
+#text{
+  width: 60px;
+}
+}
 @media (max-width: 768px) {
     .image-gallery {
         gap: 10px; /* Reducir el espacio entre las imágenes */
@@ -41,7 +52,7 @@
     height: 200px;
 } 
     .hero-text h1{
-        font-size: 3em;
+        font-size: 2em;
     }
     footer nav ul li {
   display:flex;
@@ -64,7 +75,7 @@ footer p {
 }
 @media (max-width:900px){
     .hero p{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
         .uno h2 {
 font-size: 1.2em;
@@ -109,6 +120,13 @@ font-size: 1.2em;
 }
 
 @media (max-width:420px) {
+ .featured-projects{
+margin-top: 10px;
+padding-top: 10px;
+  }
+  #projectoh2{
+font-size:1.8rem;
+  }
    .d-cta h2{
     font-size: 1em;
    }
@@ -158,12 +176,12 @@ font-size: 1.2em;
   
   }
 
-
     /* nav ul li {
 display: none;
     } */
     .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 2.7rem;
+        width: 100%;
     }
 .hero{
     height: 500px;
@@ -213,6 +231,9 @@ font-size: 1em;
       width: 40%;
       padding-top: 50px;
       margin-left: 20px;
+    }
+    .bann{
+      padding-bottom: 0;
     }
 }
 @media (max-width: 768px) {

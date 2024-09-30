@@ -1,0 +1,180 @@
+
+@media (max-width: 667px) {
+
+  #pfp{
+    margin-left: 30px;
+  }
+  .pfdiv,
+  figure{
+    justify-content: center;
+    margin-left: 30px;
+  }
+  .pfdiv p{
+    margin-left: 30px;
+  }
+    #cookie-popup h2{
+  font-size: 1em;}
+  
+  .cookie-buttons{
+  font-size: 0.8em;
+  width: 90%;
+}
+.bann h2{
+    font-size: 1.2em;
+   }
+
+   #hamburger {
+    display: block;
+    margin-left: 500px;
+  }
+  #navbar {
+    display: none;
+    width: 400px; 
+    margin-top: 10px; 
+     /* margin-left: 110px; */
+  }
+ 
+  #navbar.open {
+    display: block;
+    background-color: #8d8eae;
+    color: #fff;
+    text-decoration: underline;
+    width: 100%;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar ul li {
+    margin: 5px 0;
+  }
+#up{
+  font-size: 1.2em;
+}
+#head{
+  font-size: 1.5em;
+}
+  /* Hacer que el menú se coloque debajo del logo */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+  }
+  #mission-vision-philosophy {
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .mvp-item {
+    padding: 30px;
+    gap: 10px;
+    margin-left: 20px;
+  }
+#elementName{
+  font-size: 1.4em;
+}
+.viewer-container{
+  margin-left: 40px;
+}
+model-viewer{
+  width: 250px;
+  height: 250px;
+}
+  .mvp-item h2 {
+    font-size: 1.5em;
+  }
+
+  .mvp-item p {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 550px){
+    #hamburger {
+    display: block;
+    margin-left: 00px;
+  }
+    #navbar {
+    display: none;
+    width: 400px; 
+    margin-top: 10px; 
+     
+  }
+ 
+  #navbar.open {
+    display: block;
+    background-color: #8d8eae;
+    color: #fff;
+    text-decoration: underline;
+    width: 420px;
+    margin-left: 50px;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar ul li {
+    margin: 5px 0;
+  }
+    .mvp-item {
+    padding: 30px;
+    gap: 10px;
+    margin-left: 0px;
+  }
+}
+@media (max-width:896px){
+  body{
+    margin: 0 auto;
+  }
+ #mission-vision-philosophy {
+    padding: 20px;
+    margin-left: 20px;
+  }
+
+  .mvp-item {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    border: 3px outset #fff;
+  }
+
+  .mvp-item h2 {
+    font-size: 1.8em; /* Reducir tamaño de las cabeceras */
+    text-align: center; /* Alinear los títulos al centro */
+    margin-bottom: 10px;
+  }
+
+  .mvp-item p {
+    font-size: 1em; /* Reducir tamaño del texto */
+    text-align: justify;
+    flex-basis: 100%;
+  }
+  footer{
+    margin: 0;
+    padding: 0;
+  }
+      footer nav ul li {
+  display:flex;
+  margin: 5px 30px;
+  text-decoration: underline;
+  justify-content:start ;
+}
+footer .social-icons {
+    display: flex;
+    justify-content:end ;
+}
+footer p {
+    display: flex;
+    justify-content:end ;
+}
+}
