@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+// Simple scroll to gallery
+>>>>>>> origin/main
 function scrollToGallery() {
     document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 }
@@ -18,7 +24,11 @@ document.getElementById('prevBtn').addEventListener('click', () => {
 });
 
 // Smooth Scroll
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -27,6 +37,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+<<<<<<< HEAD
+=======
 // Efecto de escritura para el texto del hero
 const typedText = document.querySelector('.hero h1');
 const text = "Bienvenido a mi portafolio";
@@ -54,6 +66,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 //scroll
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
+>>>>>>> origin/main
 // Seleccionamos todos los elementos que tendrán la animación
 const animElements = document.querySelectorAll('.anim');
 
@@ -68,6 +85,13 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, {
     threshold: 0.1 // Disparar cuando el 10% del elemento es visible
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
+>>>>>>> origin/main
 // Aplicamos el observador a cada elemento
 animElements.forEach(element => {
     observer.observe(element);
@@ -76,8 +100,15 @@ animElements.forEach(element => {
 document.getElementById('hamburger').addEventListener('click', function () {
     var navbar = document.getElementById('navbar');
     navbar.classList.toggle('open');
+<<<<<<< HEAD
+});
+=======
 });
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
