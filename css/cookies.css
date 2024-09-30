@@ -52,3 +52,7 @@ a {
     text-decoration: underline;
     color: #c1c2c3;
 }
+#essential, #functional, #advertising, #third-party{
+    width: 30px;
+    height: 30px;
+}

@@ -1,4 +1,40 @@
+/* Responsividad */
+/* Media query para pantallas pequeñas (móviles y tabletas) */
+@media (max-width: 768px) {
+    .image-gallery {
+        gap: 10px; /* Reducir el espacio entre las imágenes */
+    }
 
+    .image-container {
+        width: 48%; /* Hacer que las imágenes ocupen dos por fila */
+        height: 250px; /* Ajustar la altura en pantallas más pequeñas */
+    }
+
+    /* Desactivar el efecto de hover y filtro gris en pantallas pequeñas */
+    .animated-img {
+        filter: none; /* No aplicar el filtro gris en pantallas pequeñas */
+        transform: none; /* No aplicar transformaciones */
+    }
+
+    .image-container:hover {
+        transform: none; /* No aplicar el zoom en hover */
+    }
+}
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-info p {
+    font-size: 0.9rem;
+  }
+}
 /* Estilos para pantallas pequeñas  */
 @media (max-width: 768px) {
 .carrousel {

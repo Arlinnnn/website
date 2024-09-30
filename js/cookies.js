@@ -6,19 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const thirdPartyCookie = document.getElementById('third-party');
     const acceptAllButton = document.getElementById('accept-all');
     const savePreferencesButton = document.getElementById('save-preferences');
-
     // Idioma y Modo del OS
     const language = navigator.language || 'es'; // Idioma predeterminado del navegador
     const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const mode = prefersDarkMode ? 'dark' : 'light'; // Detecta si el usuario prefiere modo oscuro/claro
-
     // Mostrar el banner si las cookies no han sido aceptadas
     if (!getCookie('cookieConsent')) {
         banner.classList.add('banner-visible');
     } else {
         loadGoogleAnalytics();  // Cargar cookies de terceros si ya se han aceptado
     }
-
     // Aceptar todas las cookies
     acceptAllButton.addEventListener('click', function () {
         setCookie('cookieConsent', 'all', 365);
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         banner.classList.remove('banner-visible');
         loadGoogleAnalytics();
     });
-
     // Guardar las preferencias de cookies
     savePreferencesButton.addEventListener('click', function () {
         const preferences = {
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             setCookie('essentialConsent', 'false', 365); // No aceptó las esenciales
         }
-
         // Guardar las cookies de lenguaje, modo y última sesión solo si se aceptan las cookies funcionales
         if (functionalCookie.checked) {
             setCookie('functionalConsent', 'true', 365); // Acepta las funcionales
@@ -56,13 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             setCookie('functionalConsent', 'false', 365); // No aceptó las funcionales
         }
-
         banner.classList.remove('banner-visible');
         if (preferences.thirdParty) {
             loadGoogleAnalytics();
         }
     });
-
     // Función para obtener una cookie
     function getCookie(name) {
         const value = `; ${document.cookie}`;
@@ -70,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (parts.length === 2) return parts.pop().split(';').shift();
         return null;
     }
-
     // Función para establecer una cookie
     function setCookie(name, value, days) {
         const date = new Date();
@@ -78,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const expires = `expires=${date.toUTCString()}`;
         document.cookie = `${name}=${value}; ${expires}; path=/; Secure; SameSite=Lax`;
     }
-
     // Cargar Google Analytics solo si se aceptan cookies de terceros
     function loadGoogleAnalytics() {
         if (getCookieConsent('thirdParty')) {
@@ -94,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
             ga('send', 'pageview');
         }
     }
-
     // Función para obtener preferencias de cookies
     function getCookieConsent(type) {
         const consent = getCookie('cookieConsent');

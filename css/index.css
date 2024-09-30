@@ -5,34 +5,37 @@ body, html {
   font-family: Helvetica, sans-serif;
   color: #fff;
   background-color: #090A2F;
-
   scroll-behavior: smooth;
 }
-
+#banner1{
+ object-fit: cover;
+}
 /* Sección Hero */
 .hero {
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
-
-.video-container {
-  position: absolute;
+.bann-container {
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
-
-.hero-video {
+.bann-container,
+.hero-video{
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
-
+.bann-container,
+.hero-text,
+.overlay{
+position: absolute;
+}
+.imgs{
+width: 300px;
+height: 300px;
+}
 .hero-text {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -40,30 +43,24 @@ body, html {
   color: white;
   z-index: 1;
 }
-
 .hero h1 {
-  font-size: 4rem;
   animation: fadeInDown 1s ease;
 }
-
 .hero p {
   font-size: 1.5rem;
   margin-top: 10px;
   animation: fadeInUp 1s ease;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 /* Animaciones */
 @keyframes fadeInDown {
   0% { opacity: 0; transform: translateY(-50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
 /* Sección de Proyectos */
 .featured-projects {
   padding: 50px 20px;
@@ -72,19 +69,16 @@ body, html {
   margin-bottom: 160px;
   background-color: #090A2F;
 }
-
 .featured-projects h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
     color: #090A2F;
 }
-
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 20px;
 }
-
 .project {
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -166,7 +160,6 @@ body, html {
 
 /* Overlay effect */
 .overlay {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -181,11 +174,6 @@ body, html {
 .hover-box:hover .overlay {
   opacity: 1; /* Muestra el overlay al hacer hover */
 }
-
-
-
-
-
 .img-item{
   display: flex;
 
@@ -194,10 +182,11 @@ justify-content: center;
   margin:0 auto;
     gap: 1px;
 }
-.cta h2 {
-  font-size: 2rem;
-}
 
+.cta h2,
+.hero h1{
+font-size: 2rem;
+}
 .bann{
   width: 100%;
   height: 350px;
@@ -375,7 +364,6 @@ header a:hover {
   margin: 0;
   padding: 0;
 }
-
 /* Espaciado entre los elementos del menú */
 #navbar ul li {
   margin-left: 20px;
@@ -386,7 +374,6 @@ header a:hover {
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
 /* Clase que se añade cuando el elemento entra en la vista */
 .anim.visible {
   opacity: 1;
