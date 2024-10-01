@@ -3,3 +3,15 @@
         font-size: 1.2em;
     }
 }
+@media (min-width: 600px) and (max-width: 900px) {
+  #bann4{
+    display: flex;
+    justify-content: center;
+  }
+  .uno h3{
+    font-size: 2rem;
+  }
+  #icono{
+    margin-bottom: 90px;
+  }
+}

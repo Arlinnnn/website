@@ -68,7 +68,8 @@ textarea {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
+.bann3 h2{font-size: 1.6em;
+}
 .btn-submit:hover {
   background-color: #2b2e80;
 }

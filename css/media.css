@@ -1,5 +1,37 @@
 /* Responsividad */
 /* Media query para pantallas pequeñas (móviles y tabletas) */
+@media (max-width: 550px){
+    #hamburger {
+    display: block;
+    margin-left: 00px;
+  }
+    #navbar {
+    display: none;
+    width: 400px; 
+    margin-top: 10px; 
+     
+  }
+ 
+  #navbar.open {
+    display: block;
+    background-color: #8d8eae;
+    color: #fff;
+    text-decoration: underline;
+    width: 420px;
+    margin-left: 50px;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar ul li {
+    margin: 5px 0;
+  }}
 @media (max-width: 667px) {
 header{
   width: 450px;
@@ -10,6 +42,47 @@ header{
 #text{
   width: 60px;
 }
+    #cookie-popup h2{
+  font-size: 1em;}
+  
+  .cookie-buttons{
+  font-size: 0.8em;
+  width: 90%;
+}
+.bann h2{
+    font-size: 1.2em;
+   }
+
+   #hamburger {
+    display: block;
+    margin-left: 500px;
+  }
+  #navbar {
+    display: none;
+    width: 400px; 
+    margin-top: 10px; 
+     /* margin-left: 110px; */
+  }
+ 
+  #navbar.open {
+    display: block;
+    background-color: #8d8eae;
+    color: #fff;
+    text-decoration: underline;
+    width: 100%;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar ul li {
+    margin: 5px 0;
+  }
 }
 @media (max-width: 768px) {
     .image-gallery {
@@ -38,6 +111,10 @@ header{
 }
 
 @media (max-width: 480px) {
+  body{
+    margin: 0 auto;
+    margin-left: 30px;
+  }
   .gallery-info h3 {
     font-size: 1.2rem;
   }
@@ -45,6 +122,10 @@ header{
   .gallery-info p {
     font-size: 0.9rem;
   }
+  #bann4{
+    display: none;
+  }
+
 }
 /* Estilos para pantallas pequeñas  */
 @media (max-width: 768px) {
@@ -81,7 +162,7 @@ footer p {
 font-size: 1.2em;
     }
     .uno h3{
-      font-size: 0.7em
+      font-size: 0.9em
     }
     .uno {
       width: 50%;
@@ -294,6 +375,8 @@ font-size: 1.2em;
   #navbar ul li {
     margin: 5px 0;
   }
+  .d-cta h2{font-size: 1.9em;
+}
 #up{
   font-size: 1.2em;
 }
@@ -310,4 +393,9 @@ font-size: 1.2em;
   #navbar {
     margin-top: 10px; /* Asegura que haya espacio entre el logo y el menú */
   }
+}
+@media (max-width
+:900px){
+    .d-cta h2{font-size: 2em;
+}
 }
