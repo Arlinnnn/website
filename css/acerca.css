@@ -197,9 +197,11 @@ line-height: 90px;
 }
 .bann  h2{
   padding: 20px;
-  margin-right: 80px;
+  margin-right: 180px;
 }
-
+.bann{
+  margin-right: 550px;
+}
 #containers{
     margin-top:0;
      padding: 20px;

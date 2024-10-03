@@ -16,18 +16,21 @@ a:hover{
 }
 article{
      padding:25px;
-     background-color: #1a1c51;}
+     }
 
 .mx-auto{
     max-width: 90%;
      margin: 30px;}
 
 .text-center{
-    background-color: #2b2e80;
+width: 100%;
 }
 .ng-binding{
     text-decoration: underline;
 }
 li{
     margin-bottom: 20px;
+}
+article{
+    width: 1000px;
 }

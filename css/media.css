@@ -182,7 +182,18 @@ footer p {
     font-size: 1em;
     padding-left: 10px;
 }
-
+   #copytext{
+    padding: 30px;
+    margin: 0;
+    width: 750px;
+   }
+   #policity{
+    margin: 0;
+    width: 1000px;
+   }
+   footer{
+    width: 600px;
+   }
 }
 @media (max-width:900px){
     .hero p{
@@ -227,6 +238,21 @@ font-size: 1.2em;
    }
    .bann h2{
     font-size: 1.3em;
+   }
+   #politicy,
+   #copytext{
+    margin-left: 5px;
+   }
+   .text-center{
+    margin:0;
+    width: 100%;
+   }
+   #copytext{
+    margin: 0;
+    width: 450px;
+   }
+   footer{
+    width: 500px;
    }
 }
 
